@@ -1,0 +1,10 @@
+<h2>Episodios del Personaje Seleccionado</h2>
+<ul *ngIf="episodes.length > 0; else noEpisodes">
+  <li *ngFor="let episode of episodes">
+    {{ episode | slice: -1 }} <!-- Muestra el número del episodio -->
+  </li>
+</ul>
+
+<ng-template #noEpisodes>
+  <p>No hay episodios disponibles para mostrar.</p>
+</ng-template>
